@@ -1,0 +1,32 @@
+﻿@page "/login"
+
+<PageTitle>כניסה - Triplit</PageTitle>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold mb-2">התחברות ל־Triplit</h2>
+                    <p class="text-secondary small">המשך לתכנן את הטיולים והמסלולים שלך</p>
+                </div>
+
+                <form>
+                    <!-- שימוש ברכיב השדה שלנו עבור האימייל והסיסמה -->
+                    <Field Id="email" Label="כתובת אימייל" Type="email" Placeholder="name@example.com" />
+                    <Field Id="password" Label="סיסמה" Type="password" Placeholder="הכניסו את הסיסמה שלכם" />
+
+                    <!-- כפתור התחברות מעוצב בגוון תואם -->
+                    <button type="submit" class="btn w-100 fw-bold py-2 mt-3 text-white border-0 shadow-sm" style="background-color: #ffb6c1; color: #d63384 !important;">
+                        התחבר
+                    </button>
+                </form>
+
+                <div class="text-center mt-4">
+                    <span class="text-secondary small">אין לכם חשבון עדיין? </span>
+                    <a href="/register" class="text-decoration-none fw-bold" style="color: #38b6ff;">הירשמו כאן</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

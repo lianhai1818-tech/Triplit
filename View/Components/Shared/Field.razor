@@ -1,0 +1,12 @@
+﻿<div class="mb-3">
+    <label for="@Id" class="form-label">@Label</label>
+    <input type="@Type" id="@Id" class="form-control form-control-lg" dir="@Dir" placeholder="@Placeholder" />
+</div>
+
+@code {
+    [Parameter] public string Id { get; set; } = string.Empty;
+    [Parameter] public string Label { get; set; } = string.Empty;
+    [Parameter] public string Type { get; set; } = "text";
+    [Parameter] public string Dir { get; set; } = "rtl";
+    [Parameter] public string Placeholder { get; set; } = string.Empty;
+}

@@ -1,0 +1,33 @@
+@EmetGuard_HostAddress = http://localhost:5201
+
+### 1. קבלת כל המשתמשים (אמור להחזיר רשימה ריקה בהתחלה)
+GET {{EmetGuard_HostAddress}}/api/users
+Accept: application/json
+
+### 2. הוספת משתמש חדש (Register)
+POST {{EmetGuard_HostAddress}}/api/users/register
+Content-Type: application/json
+
+{
+  "username": "student_test",
+  "email": "test@student.com",
+  "password": "12345Password"
+}
+
+### 3. ניסיון התחברות עם המשתמש שיצרנו (Login - הצלחה)
+POST {{EmetGuard_HostAddress}}/api/users/login
+Content-Type: application/json
+
+{
+  "username": "student_test",
+  "password": "12345Password"
+}
+
+### 4. ניסיון התחברות עם סיסמה שגויה (Login - אמור להחזיר שגיאת 401)
+POST {{EmetGuard_HostAddress}}/api/users/login
+Content-Type: application/json
+
+{
+  "username": "student_test",
+  "password": "WrongPassword"
+}

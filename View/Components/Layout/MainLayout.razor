@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page d-flex flex-column min-vh-100">
+    <!-- סרגל עליון (Navbar) -->
+    <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="text-decoration-none">
+                <Logo />
+            </a>
+            <div class="d-flex gap-2 align-items-center">
+                <!-- כפתור כניסה עם מסגרת ורודה וטקסט תואם -->
+                <a href="/login" class="btn fw-bold" style="border: 2px solid #ffb6c1; color: #d63384;">כניסה</a>
+
+                <!-- כפתור הרשמה מלא בורוד בייבי -->
+                <a href="/register" class="btn fw-bold border-0" style="background-color: #ffb6c1; color: #d63384;">הרשמה</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- תוכן הדף המשתנה -->
+    <main class="flex-grow-1">
+        @Body
+    </main>
+
+    <!-- תחתית האתר (Footer) -->
+    <footer class="bg-white border-top py-4 text-center text-secondary mt-auto">
+        <div class="container">
+            <p class="mb-0">Triplit &copy; 2026 - כל הזכויות שמורות</p>
+        </div>
+    </footer>
+</div>
